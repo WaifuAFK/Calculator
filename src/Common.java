@@ -15,9 +15,11 @@ public class Common {
         String oper = sc.next();
         String num2 = sc.next();
 
+        //в if будет проводиться проверка на соответствие заданному диапазону римских чисел, в случае true, через оператор switch case будут считаны числа, арифметический знак.
+
         if ((num1.equals("I") || num1.equals("II") || num1.equals("III") || num1.equals("IV") || num1.equals("V") || num1.equals("VI") || num1.equals("VII") || num1.equals("VIII") || num1.equals("IX") || num1.equals("X")) && (num2.equals("I") || num2.equals("II") || num2.equals("III") || num2.equals("IV") || num2.equals("V") || num2.equals("VI") || num2.equals("VII") || num2.equals("VIII") || num2.equals("IX") || num2.equals("X"))) {
 
-            switch (num1) {
+            switch (num1) {             // через оператор switch case происходит перевод римских чисел в арабские
                 case "I":
                     a = 1;
                     break;
@@ -52,7 +54,7 @@ public class Common {
                     System.out.println("Первое число не поддерживается ");
             }
 
-            switch (num2) {
+            switch (num2) {               // через оператор switch case происходит перевод римских чисел в арабские
                 case "I":
                     b = 1;
                     break;
@@ -87,7 +89,7 @@ public class Common {
                     System.out.println("Второе число не поддерживается ");
             }
 
-                    switch (oper) {
+                    switch (oper) {               // через оператор switch case происходит считывание знака арифметической операции и выполнение вычислений
                         case "+":
                             c = a+b;
 
@@ -113,7 +115,7 @@ public class Common {
                     }
 
 
-                    String s = "";
+                    String s = "";    // через while написана система перевода результата операции с арабскими числами обратно в римские + вывод результата на консоль
 
 
                     while (c >= 100) {
@@ -153,12 +155,17 @@ public class Common {
                         c -= 1;
                     }
 
-                    System.out.println(inttorom);
+                    System.out.println(inttorom);    //ниже прописаны условия, при которых одно из чисел не соответствует системе счисления второго числа
+
             }    else if ((num1.equals("I") || num1.equals("II") || num1.equals("III") || num1.equals("IV") || num1.equals("V") || num1.equals("VI") || num1.equals("VII") || num1.equals("VIII") || num1.equals("IX") || num1.equals("X")) && (num2.equals("1") || num2.equals("2") || num2.equals("3") || num2.equals("4") || num2.equals("5") || num2.equals("6") || num2.equals("7") || num2.equals("8") || num2.equals("9") || num2.equals("10"))) {
 
             System.out.println("Оба числа должны быть из одной системы счисления");
+
         } else if ((num1.equals("1") || num1.equals("2") || num1.equals("3") || num1.equals("4") || num1.equals("5") || num1.equals("6") || num1.equals("7") || num1.equals("8") || num1.equals("9") || num1.equals("10")) && (num2.equals("I") || num2.equals("II") || num2.equals("III") || num2.equals("IV") || num2.equals("V") || num2.equals("VI") || num2.equals("VII") || num2.equals("VIII") || num2.equals("IX") || num2.equals("X"))) {
             System.out.println("Оба числа должны быть из одной системы счисления");
+
+            // если не выполняется условие if на соответствие римским числам, то проверяется условие на соответствие заданному диапазону арабских чисел, при true происходит считывание знака и выполнение арифметической операции с выводом результата на консоль
+
         } else if ((num1.equals("1") || num1.equals("2") || num1.equals("3") || num1.equals("4") || num1.equals("5") || num1.equals("6") || num1.equals("7") || num1.equals("8") || num1.equals("9") || num1.equals("10")) && (num2.equals("1") || num2.equals("2") || num2.equals("3") || num2.equals("4") || num2.equals("5") || num2.equals("6") || num2.equals("7") || num2.equals("8") || num2.equals("9") || num2.equals("10"))) {
 
         Integer ch1 = Integer.valueOf(num1);
