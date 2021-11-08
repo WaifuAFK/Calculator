@@ -16,6 +16,7 @@ public class Common {
         String num2 = sc.next();
 
         if ((num1.equals("I") || num1.equals("II") || num1.equals("III") || num1.equals("IV") || num1.equals("V") || num1.equals("VI") || num1.equals("VII") || num1.equals("VIII") || num1.equals("IX") || num1.equals("X")) && (num2.equals("I") || num2.equals("II") || num2.equals("III") || num2.equals("IV") || num2.equals("V") || num2.equals("VI") || num2.equals("VII") || num2.equals("VIII") || num2.equals("IX") || num2.equals("X"))) {
+
             switch (num1) {
                 case "I":
                     a = 1;
@@ -104,7 +105,7 @@ public class Common {
 
                             break;
                         case "/":
-                            c = a*b;
+                            c = a/b;
 
                             break;
                         default:
@@ -153,7 +154,12 @@ public class Common {
                     }
 
                     System.out.println(inttorom);
-            }    else {
+            }    else if ((num1.equals("I") || num1.equals("II") || num1.equals("III") || num1.equals("IV") || num1.equals("V") || num1.equals("VI") || num1.equals("VII") || num1.equals("VIII") || num1.equals("IX") || num1.equals("X")) && (num2.equals("1") || num2.equals("2") || num2.equals("3") || num2.equals("4") || num2.equals("5") || num2.equals("6") || num2.equals("7") || num2.equals("8") || num2.equals("9") || num2.equals("10"))) {
+
+            System.out.println("Оба числа должны быть из одной системы счисления");
+        } else if ((num1.equals("1") || num1.equals("2") || num1.equals("3") || num1.equals("4") || num1.equals("5") || num1.equals("6") || num1.equals("7") || num1.equals("8") || num1.equals("9") || num1.equals("10")) && (num2.equals("I") || num2.equals("II") || num2.equals("III") || num2.equals("IV") || num2.equals("V") || num2.equals("VI") || num2.equals("VII") || num2.equals("VIII") || num2.equals("IX") || num2.equals("X"))) {
+            System.out.println("Оба числа должны быть из одной системы счисления");
+        } else if ((num1.equals("1") || num1.equals("2") || num1.equals("3") || num1.equals("4") || num1.equals("5") || num1.equals("6") || num1.equals("7") || num1.equals("8") || num1.equals("9") || num1.equals("10")) && (num2.equals("1") || num2.equals("2") || num2.equals("3") || num2.equals("4") || num2.equals("5") || num2.equals("6") || num2.equals("7") || num2.equals("8") || num2.equals("9") || num2.equals("10"))) {
 
         Integer ch1 = Integer.valueOf(num1);
         Integer ch2 = Integer.valueOf(num2);
@@ -190,6 +196,8 @@ public class Common {
             default:
                 System.out.println("Такой операции не существует. Доступные операции: *, /, +, -");
         }
+        } else {
+            System.out.println("Недопустимое выражение");
         }
 
     }

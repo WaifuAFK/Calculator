@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MainRimsk {
+public class Rimsk {
     public static void main(String[] args) {
 
         int a = 0, b = 0, c = 0;
@@ -101,7 +101,7 @@ public class MainRimsk {
 
                 break;
             case "/":
-                c = a*b;
+                c = a/b;
 
                 break;
             default:
